@@ -1,0 +1,45 @@
+<%include  header.ejs %>
+    <div class=" admin-content">
+        <div class="daohang">
+        </div>
+        <div class="admin-biaogelist">
+            <div class="listbiaoti am-cf">
+                <ul class="am-icon-flag on"> 栏目名称</ul>
+                <dl class="am-icon-home" style="float: right;"> 当前位置： 首页 > <a href="#">个人信息</a></dl>
+                <dl>
+                    <button type="button" class="am-btn am-btn-danger am-round am-btn-xs am-icon-plus"> 个人信息</button>
+                </dl>
+            </div>
+            <form class="am-form am-g">
+                <table width="100%" class="am-table am-table-bordered am-table-radius am-table-striped">
+                    <thead>
+                        <tr class="am-success">
+                            <th width="163px" class="table-set">员工编号</th>
+                            <th class="table-id">职位</th>
+                            <th class="table-title">姓名</th>
+                            <th class="table-title">地址</th>
+                            <th class="table-date am-hide-sm-only">公司电话分机号</th>
+                            <th width="163px" class="table-set">家用电话号码</th>
+                            <th width="163px" class="table-set">Email地址</th>
+                            <th width="163px" class="table-set">社保号码</th>
+                            <th width="163px" class="table-set">出生日期</th>
+                            <th width="163px" class="table-set">部门</th>
+                            <th width="163px" class="table-set">性别</th>
+                            <th width="163px" class="table-set">工资</th>
+                            <th width="163px" class="table-set">开始时间</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+                <hr />
+                <div class="am-form-group am-cf">
+                    <div class="zuo">修改密码</div>
+                    <div class="you">
+                        <input type="text" class="am-input-sm" id="password">
+                        <button type="button" id="update_pw" class="am-btn am-btn-success am-radius ">确定</button>
+                    </div>
+                </div>
+                <p class="Message">注：.....</p>
+            </form>
+            <%include  footer.ejs %>

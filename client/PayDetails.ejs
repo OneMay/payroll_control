@@ -1,0 +1,81 @@
+<%include  header.ejs %>
+    <div class=" admin-content">
+        <div class="daohang">
+        </div>
+        <div class="admin-biaogelist">
+
+            <div class="listbiaoti am-cf">
+                <ul class="am-icon-flag on"> 栏目名称</ul>
+
+                <dl class="am-icon-home" style="float: right;"> 当前位置： 首页 > <a href="#">支付中心</a></dl>
+                <dl>
+                    <button type="button" class="am-btn am-btn-danger am-round am-btn-xs am-icon-plus"> 支付中心</button>
+                </dl>
+            </div>
+
+            <div class="fbneirong">
+                <form class="am-form">
+                    <div class="am-form-group am-cf">
+                        <div class="zuo">员工编号 </div>
+                        <div class="you">
+                            <select name="sex" id="employeeNo" class="am-input-sm PayDetail" onchange="getMoney()">
+                             </select>
+                        </div>
+                    </div>
+                    <div class="am-form-group am-cf">
+                        <div class="zuo">工资 </div>
+                        <div class="you">
+                            <span name="money" id="money" class="am-input-sm PayDetail"></span>
+                        </div>
+                    </div>
+                    <div class="am-form-group am-cf">
+                        <div class="zuo"> 汇款开始日期</div>
+                        <div class="you">
+                            <input type="date" class="am-input-sm PayDetail" id="startDate">
+                        </div>
+                    </div>
+                    <div class="am-form-group am-cf">
+                        <div class="zuo">汇款编号</div>
+                        <div class="you">
+                            <input type="text" class="am-input-sm PayDetail" id="routingNumber" placeholder="汇款编号">
+                        </div>
+                    </div>
+                    <div class="am-form-group am-cf">
+                        <div class="zuo">账号类型</div>
+                        <div class="you">
+                            <input type="text" class="am-input-sm PayDetail" id="accountType" placeholder="账号类型">
+                        </div>
+                    </div>
+                    <div class="am-form-group am-cf">
+                        <div class="zuo">银行类型</div>
+                        <div class="you">
+                            <input type="text" class="am-input-sm PayDetail" id="bankName" placeholder="银行类型">
+                        </div>
+                    </div>
+                    <div class="am-form-group am-cf">
+                        <div class="zuo">银行账号</div>
+                        <div class="you">
+                            <input type="text" class="am-input-sm PayDetail" id="bankAddress" placeholder="银行账号">
+                        </div>
+                    </div>
+                    <div class="am-form-group am-cf">
+                        <div class="zuo">支付类型编号</div>
+                        <div class="you">
+                            <select name="payTypeNo" id="payTypeNo" class="am-input-sm PayDetail">
+                            
+                            </select>
+                        </div>
+                    </div>
+                    <div class="am-form-group am-cf">
+                        <div class="you" style="margin-left: 11%;">
+                            <span id="PayDetailsAdd" class="am-btn am-btn-success am-radius">添加</span>
+                            <span class="am-form-help" id="Message" style="display:inline-block;"></span>
+                        </div>
+                    </div>
+                    <div class="PayDetails">支付历史
+                        <hr />
+                        <p class="Message"></p>
+                    </div>
+                </form>
+            </div>
+            <%include  footer.ejs %>
