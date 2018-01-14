@@ -65,9 +65,9 @@ CREATE TABLE PayHistory
 (
   payNo char(4),
   employeeNo char(10),
-  primary key(payNo,employeeNo),
+  primary key(payNo),
   paydate date,
-  checkNumber char(4)unique,
+  checkNumber char(10),
   payAmount float(5),
   foreign key (employeeNo) REFERENCES Employee(employeeNo)
 )

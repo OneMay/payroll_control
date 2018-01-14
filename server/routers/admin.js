@@ -1123,6 +1123,7 @@ router.post('/PayDetails/add', function(req, res, next) {
                                             payNo: 'No' + (count + 1)
                                         }
                                     }
+                                    console.log(999)
                                     db.PayHistory_add(client, data, function(result) {
                                         responseData.code = 200;
                                         responseData.message = '添加成功';

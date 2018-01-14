@@ -233,7 +233,7 @@
      var employeeNO;
      if (employee) {
          employee.onclick = function() {
-             employeeNO = document.getElementById('EmployeeNO').value;
+             employeeNO = document.getElementById('employeeNO').value;
              $.ajax({
                  url: '/admin/employee/employeeNo_search',
                  type: 'POST',
@@ -341,7 +341,7 @@
                     </form>`;
                          $('.fbneirong').html(str);
                      } else {
-                         $('.Message').html(data.message);
+                         $('.fbneirong').html(data.message);
                      }
                  },
                  err: function(err) {
@@ -1413,7 +1413,6 @@
                                 <th class="table-id">工资发放日期</th>
                                 <th class="table-id">核对编号</th>
                                 <th class="table-id">支付金额</th>
-                                <th width="130px" class="table-set">操作</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -1430,13 +1429,6 @@
                              "<td>" + new Date(value.paydate).Format("yyyy-MM-dd") + "</td>" +
                              "<td>" + value.checkNumber + "</td>" +
                              "<td>" + value.payAmount + "</td>" +
-                             "<td>" +
-                             '<div class="am-btn-toolbar">' +
-                             '<div class="am-btn-group am-btn-group-xs">' +
-                             '<span class="am-btn am-btn-default am-btn-xs am-text-danger am-round" title="删除">' + '<span class="am-icon-trash-o" onclick="PayType_delete(' + "'" + value.payTypeNo + "'" + ')">' + '</span></span>' +
-                             '</div>' +
-                             '</div>' +
-                             '</td>' +
                              "</tr>";
                          $('.PayDetails tbody').append(html);
                      })
@@ -1601,7 +1593,7 @@
      }
  }
 
- if (pathname = '/user/pay') {
+ if (pathname == '/user/pay') {
      var employeeNO = document.getElementById('EmployeeNO').textContent;
      $.ajax({
          url: '/admin/PayHistory/searchOne',
